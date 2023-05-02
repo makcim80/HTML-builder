@@ -12,7 +12,7 @@ function endProcess() {
 }
 
 stdin.on('data', data => {
-  if (data.toString() === 'exit\n') {
+  if (data.toString().trim() === 'exit') {
     endProcess();
   } else {
     output.write(data);
