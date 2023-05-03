@@ -1,6 +1,7 @@
 const path = require('path');
 const { readdir, stat } = require('fs/promises');
 const options = { withFileTypes: true };
+
 readdir(path.join(__dirname, 'secret-folder'), options)
   .then(contents => contents
     .forEach(dirent => {
